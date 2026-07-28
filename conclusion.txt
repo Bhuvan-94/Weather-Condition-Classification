@@ -1,0 +1,5 @@
+Key Findings: The Support Vector Machine (SVM) model with an RBF kernel classifies the weather condition (Cool vs Warm) with an accuracy of 91.2%. The precision is 83.3% and recall is 71.4%, highlighting high robustness. The target variable is derived directly from Temperature (Warm if >= 25°C), making Temperature the dominant predictive feature.
+
+Importance of Feature Scaling in SVM: SVM attempts to maximize the margin between classes by measuring geometric distances between data points (support vectors). Without feature scaling (via StandardScaler), features with large numeric ranges like Surface Pressure (around 1000 hPa) would completely dominate features with smaller scales like Temperature or Wind Speed, distorting the distance measurements and making the RBF kernel ineffective.
+
+Advantage and Limitation of SVM: One key advantage of SVM is its ability to handle non-linear decision boundaries efficiently using the kernel trick (specifically the RBF kernel). A major limitation of SVM is its sensitivity to hyperparameter selection (like C and gamma) and its high computational cost when training on very large datasets.
